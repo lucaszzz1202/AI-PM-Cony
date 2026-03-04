@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "confluence-mcp": {
+      "command": "npx",
+      "args": ["@mcd/confluence-mcp-server@latest"],
+      "env": {
+        "CONFLUENCE_URL": "https://pmo.mcd.com.cn/confluence",
+        "CONFLUENCE_USERNAME": "cn-lucaszhuang",
+        "CONFLUENCE_TOKEN": "YOUR_CONFLUENCE_TOKEN_HERE",
+        "CONFLUENCE_CLOUD": "false"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "search",
+        "get_page",
+        "get_page_children",
+        "get_attachments"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "disabled": false,
+      "autoApprove": [
+        "take_screenshot",
+        "take_snapshot",
+        "navigate_page",
+        "list_pages"
+      ]
+    },
+    "workspace-hub": {
+      "command": "npx",
+      "args": ["@mcd/workspace-hub-mcp-server@latest"],
+      "disabled": false,
+      "autoApprove": [
+        "setup_workspace",
+        "advance_stage",
+        "return_stage"
+      ]
+    }
+  }
+}
